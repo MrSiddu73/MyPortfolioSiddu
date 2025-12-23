@@ -36,7 +36,7 @@ Currently focused on AWS services, Kubernetes orchestration, and building event-
   ],
   education: 'Software Development Engineering - Full Stack',
   location: 'Bengaluru, India',
-  email: 'siddu.nyamagoud@example.com',
+  email: 'siddusnyamagoud27@gmail.com',
   availability: 'Open to DevOps and Cloud Engineering opportunities',
   socialLinks: {
     github: 'https://github.com/MrSiddu73',
