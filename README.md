@@ -24,9 +24,9 @@ It is built using **React + TypeScript + Vite + Tailwind + ShadCN UI** and deplo
 ---
 
 ## 📬 Contact Me
-📧 Email: **(your updated email)**  
+📧 Email: **siddusnyamagoud27@gmail.com**  
 📍 Location: Bengaluru, India  
-🔗 LinkedIn: *(add your link)*  
+🔗 LinkedIn: https://www.linkedin.com/in/sid73/ 
 🔗 GitHub: https://github.com/MrSiddu73  
 
 ---
