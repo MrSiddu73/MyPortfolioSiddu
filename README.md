@@ -7,7 +7,7 @@ It is built using **React + TypeScript + Vite + Tailwind + ShadCN UI** and deplo
 ---
 
 ## 🚀 Live Website
-🔗 https://myportfoliosiddu.vercel.app](https://myportfoliosiddu73.vercel.app/
+🔗 https://myportfoliosiddu.vercel.app
 
 ---
 
