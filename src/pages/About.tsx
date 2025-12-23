@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Briefcase, Award, GraduationCap, ExternalLink } from 'lucide-react';
 import { developerInfo } from '@/data/developer';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
@@ -131,8 +131,118 @@ export default function About() {
                     <span className="text-muted-foreground">Location: </span>
                     <span className="text-foreground">{developerInfo.location}</span>
                   </div>
+                  <div className="text-sm font-light tracking-wide">
+                    <span className="text-muted-foreground">Education: </span>
+                    <span className="text-foreground">{developerInfo.education}</span>
+                  </div>
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Work Experience Section */}
+        <section className="py-16 md:py-24 px-6 lg:px-8 border-t border-border">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="flex items-center gap-3 mb-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <Briefcase className="size-8 text-primary" />
+              <h2 className="text-3xl md:text-4xl font-light tracking-wide">
+                Work Experience
+              </h2>
+            </motion.div>
+            
+            <div className="space-y-12">
+              {developerInfo.workExperience.map((job, index) => (
+                <motion.div
+                  key={index}
+                  className="relative pl-8 border-l-2 border-border"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary" />
+                  <div className="space-y-3">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-medium tracking-wide">
+                        {job.title}
+                      </h3>
+                      <p className="text-lg text-primary font-light">{job.company}</p>
+                      <p className="text-sm text-muted-foreground font-light">
+                        {job.location} • {job.period}
+                      </p>
+                    </div>
+                    <ul className="space-y-2">
+                      {job.description.map((item, i) => (
+                        <li
+                          key={i}
+                          className="text-muted-foreground font-light leading-relaxed flex items-start gap-2"
+                        >
+                          <span className="text-primary mt-1.5">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="py-16 md:py-24 px-6 lg:px-8 border-t border-border">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="flex items-center gap-3 mb-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <Award className="size-8 text-primary" />
+              <h2 className="text-3xl md:text-4xl font-light tracking-wide">
+                Certifications
+              </h2>
+            </motion.div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {developerInfo.certifications.map((cert, index) => (
+                <motion.div
+                  key={index}
+                  className="p-6 border border-border rounded-lg hover:border-primary/50 transition-colors group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-start justify-between">
+                      <GraduationCap className="size-6 text-primary" />
+                      {cert.credentialUrl && (
+                        <a
+                          href={cert.credentialUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="opacity-0 group-hover:opacity-100 transition-opacity"
+                          aria-label="View credential"
+                        >
+                          <ExternalLink className="size-4 text-muted-foreground hover:text-primary" />
+                        </a>
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="font-medium tracking-wide">{cert.name}</h3>
+                      <p className="text-sm text-muted-foreground font-light">{cert.issuer}</p>
+                      <p className="text-xs text-muted-foreground font-light mt-1">{cert.date}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

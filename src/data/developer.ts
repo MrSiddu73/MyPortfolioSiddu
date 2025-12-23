@@ -34,6 +34,56 @@ Currently focused on AWS services, Kubernetes orchestration, and building event-
     'Automated infrastructure provisioning and snapshot management',
     'Implemented CI/CD pipelines with GitHub Actions and Jenkins'
   ],
+  workExperience: [
+    {
+      title: 'DevOps Engineer',
+      company: 'Freelance / Personal Projects',
+      location: 'Bengaluru, India',
+      period: '2023 - Present',
+      description: [
+        'Designed and implemented scalable 3-tier AWS architectures with VPC, public/private subnets, and Aurora MySQL',
+        'Built event-driven serverless applications using AWS Lambda, API Gateway, S3, SNS, and SQS',
+        'Containerized applications with Docker and orchestrated deployments on AWS EKS (Kubernetes)',
+        'Automated infrastructure provisioning and snapshot management using Terraform and AWS CLI',
+        'Set up CI/CD pipelines with GitHub Actions for automated testing and deployment'
+      ]
+    },
+    {
+      title: 'Full Stack Developer Trainee',
+      company: 'Algorithm365 Organization',
+      location: 'Remote',
+      period: '2022 - 2023',
+      description: [
+        'Contributed to open-source projects focused on web development and DevOps automation',
+        'Developed Java and Python applications with MySQL/PostgreSQL databases',
+        'Implemented RESTful APIs and integrated third-party services',
+        'Practiced Agile methodologies and collaborative development workflows'
+      ]
+    }
+  ],
+  certifications: [
+    {
+      name: 'AWS Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      date: '2024',
+      credentialUrl: 'https://aws.amazon.com/certification/'
+    },
+    {
+      name: 'Docker Essentials',
+      issuer: 'Docker Inc.',
+      date: '2023'
+    },
+    {
+      name: 'Kubernetes Fundamentals',
+      issuer: 'Cloud Native Computing Foundation',
+      date: '2023'
+    },
+    {
+      name: 'GitHub Actions CI/CD',
+      issuer: 'GitHub',
+      date: '2023'
+    }
+  ],
   education: 'Software Development Engineering - Full Stack',
   location: 'Bengaluru, India',
   email: 'siddusnyamagoud27@gmail.com',
