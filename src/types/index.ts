@@ -5,6 +5,21 @@
 
 export type ProjectCategory = 'devops' | 'cloud' | 'web' | 'backend' | 'automation';
 
+export interface WorkExperience {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string[];
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  credentialUrl?: string;
+}
+
 export type AspectRatio = 'portrait' | 'landscape' | 'square';
 
 export interface ProjectImage {
@@ -29,6 +44,21 @@ export interface Project {
   slug: string;
 }
 
+export interface WorkExperience {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string[];
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  credentialUrl?: string;
+}
+
 export interface DeveloperInfo {
   name: string;
   tagline: string;
@@ -39,6 +69,8 @@ export interface DeveloperInfo {
     items: string[];
   }[];
   experience: string[];
+  workExperience: WorkExperience[];
+  certifications: Certification[];
   education: string;
   location: string;
   email: string;
