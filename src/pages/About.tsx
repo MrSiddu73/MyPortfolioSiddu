@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Briefcase, Award, GraduationCap, ExternalLink } from 'lucide-react';
+import { Linkedin, Briefcase, Award, GraduationCap, ExternalLink, Download } from 'lucide-react';
 import { developerInfo } from '@/data/developer';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
@@ -57,8 +57,8 @@ export default function About() {
                   />
                 </div>
                 
-                {/* Social Links */}
-                <div className="flex items-center gap-4">
+                {/* Social Links & Resume */}
+                <div className="flex items-center gap-4 flex-wrap">
                   {developerInfo.socialLinks.github && (
                     <a
                       href={developerInfo.socialLinks.github}
@@ -81,6 +81,14 @@ export default function About() {
                       <Linkedin className="size-5" />
                     </a>
                   )}
+                  <a
+                    href="/resume.pdf"
+                    download="Siddu_Nyamagoud_Resume.pdf"
+                    className="flex items-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-sm hover:bg-primary/90 transition-colors font-medium text-sm"
+                  >
+                    <Download className="size-4" />
+                    Download Resume
+                  </a>
                 </div>
               </motion.div>
 
